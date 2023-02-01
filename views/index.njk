@@ -1,11 +1,30 @@
 {% extends "layout.njk" %}
 {% block content %}
-<main class="container flow">
-    <header class="hero">
-        <h1>Kaos fortnite</h1>
-    </header>
-    <section class="flow">
-        <h1>sak</h1>
-    </section>
-</main>
+<div class="hero">
+    <div class="catagory">
+        <h2>Senaste upplägg</h2>
+    </div>
+    <div class="senaste">
+        <ul>
+            {% for row in rows %}
+            <li>
+                <div class="msg">
+                    <div class="msg-title">
+                        <p>{{ row.title }}</p>
+                        <p>{{ row.name }}</p>
+                    </div>
+                    <div class="msg-content">
+                        <p>{{ row.content }}</p>
+                        <p>{{ row.createdAt }}</p>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div class="support">
+    <a href="/" class="supportlogo"><img src="/images/supportlama.png" alt="Logo"></a>
+</div>
+</div>
 {% endblock %}

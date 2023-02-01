@@ -2,12 +2,13 @@ body {
     background-color: #F4FFF8;
     display: flex;
     flex-direction: column;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(112,18,182,1) 100%);
 }
 
 .navbar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem;
     background-color: #242038;
@@ -63,8 +64,6 @@ body {
     display: grid;
 }
 
-
-
 footer {
     padding: 1rem;
     background-color: #242038;
@@ -78,10 +77,9 @@ footer {
 }
 
 .logo  {
-    display: block;
     width: 30%;
     height: 30%;
-    margin: auto;
+    display: block;
 }
 
 .post {
@@ -99,19 +97,119 @@ footer {
     margin: 1rem;
 }
 
-.inlagg{
+.inlagg {
     display: flex;
     flex-direction: column-reverse;
     padding: 1rem;
-    background-color: #F4FFF8;
+    background-color: white;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     margin: 1rem;
+    border-radius: 0.5rem;
+    width: min(175ch, 100vw - 2rem);
+    margin-inline: auto;
+}
+
+.senaste {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.msg {
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.msg:hover {
+    background-color: hsl(0, 0%, 85%);
+    cursor: pointer;
+}
+
+.supportlogo:hover {
+    cursor: pointer;
+    animation: tilt-shaking 0.15s infinite;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.msg-title {
+    font-weight: bolder;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    > p:first-child {
+        margin-right: auto;
+    }
+}
+
+.msg-content {
+    font-weight: normal;
+}
+
+.msg-hidden {
+    display: none;
 }
 
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catagory {
+    padding: 1rem;
+    background-color: #242038;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
 
 
+.supportlogo {
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 200px;
+}
+
+.hero {
+    width: min(175ch, 100vw - 2rem);
+    margin-inline: auto;
+    
+}
 
 
-
-
+.postbackground {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
