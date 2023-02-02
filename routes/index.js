@@ -39,4 +39,11 @@ router.post('/new', async function (req, res, next) {
     res.redirect('/'); 
 });
 
+router.get('/login', async function (req, res, next) {
+    res.render('login.njk', {
+        title: 'Logga in',
+    });
+});
 
+
+// Path: views/index.njk
