@@ -12,8 +12,8 @@
             {% for row in rows %}
             <li>
                 <div class="msg">
+                    <a class="stretched-link" href="/post/{{ row.id }}">{{ row.title }}</a>
                     <div class="msg-title">
-                        <p>{{ row.title }}</p>
                         <p>{{ row.name }}</p>
                     </div>
                     <div class="msg-content">

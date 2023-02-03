@@ -6,3 +6,13 @@ button.addEventListener("click", function (event) {
     console.log(menu);
     menu.classList.toggle("navbar__collapse--show");
 });
+
+function changeImage() {
+    var image = document.getElementById('logochange');
+    if (image.src.match("menuiconopned.svg")) {
+        image.src = "/images/menuicon.svg";
+    }
+    else {
+        image.src = "/images/menuiconopned.svg";
+    }
+}

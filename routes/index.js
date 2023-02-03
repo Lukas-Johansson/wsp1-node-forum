@@ -45,5 +45,15 @@ router.get('/login', async function (req, res, next) {
     });
 });
 
+router.get('/post/:id', async function (req, res) {
+    const [rows] = await promisePool.query('SELECT * FROM lj04forum WHERE id = ?', [req.params.id])
+    res.render('post.njk', {
+        post: rows[0],
+        title: 'Inlägg',
+    });
+});
+
+
+
 
 // Path: views/index.njk
